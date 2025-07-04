@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kennisbank</title>
+    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js" rel="stylesheet" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+        max-width: 960px;
+        margin: auto;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .search {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin: 1.5rem 0;
+      }
+
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin-top: 2rem;
+      }
+
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+        transition: box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 0.5rem;
+      }
+
+      .card h3 {
+        margin: 0.5rem 0;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      .cta {
+        display: block;
+        margin: 3rem auto 0;
+        text-align: center;
+        background: #0047ab;
+        color: white;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+
+      .cta:hover {
+        background: #003a90;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Kennisbank</h1>
+    <p>Ontdek informatie per onderwerp of zoek direct een artikel.</p>
+
+    <!-- Zoekveld -->
+    <input class="search" type="text" placeholder="Zoek in de kennisbank..." />
+
+    <!-- Categorieën -->
+    <div class="grid">
+      <a href="/kennisbank?categorie=introduction" class="card">
+        <div class="icon" data-lucide="info"></div>
+        <h3>Introductie</h3>
+        <p>Basisinformatie over het proces.</p>
+      </a>
+      <a href="/kennisbank?categorie=application" class="card">
+        <div class="icon" data-lucide="edit"></div>
+        <h3>Aanvraag</h3>
+        <p>Hoe dien je een aanvraag in?</p>
+      </a>
+      <a href="/kennisbank?categorie=proof" class="card">
+        <div class="icon" data-lucide="file-text"></div>
+        <h3>Bewijsstukken</h3>
+        <p>Welke documenten heb je nodig?</p>
+      </a>
+      <a href="/kennisbank?categorie=conditions" class="card">
+        <div class="icon" data-lucide="list-checks"></div>
+        <h3>Voorwaarden</h3>
+        <p>Wat zijn de voorwaarden van je aanvraag?</p>
+      </a>
+      <a href="/kennisbank?categorie=objection" class="card">
+        <div class="icon" data-lucide="alert-triangle"></div>
+        <h3>Bezwaar</h3>
+        <p>Hoe maak je bezwaar tegen een beslissing?</p>
+      </a>
+      <a href="/kennisbank?categorie=costs" class="card">
+        <div class="icon" data-lucide="euro"></div>
+        <h3>Kosten</h3>
+        <p>Wat zijn de kosten en wanneer betaal je?</p>
+      </a>
+      <a href="/kennisbank?categorie=term" class="card">
+        <div class="icon" data-lucide="calendar-days"></div>
+        <h3>Termijnen</h3>
+        <p>Wanneer moet je actie ondernemen?</p>
+      </a>
+      <a href="/kennisbank?categorie=what-to-do-if-no-response" class="card">
+        <div class="icon" data-lucide="clock"></div>
+        <h3>Geen reactie</h3>
+        <p>Wat kun je doen als je niets hoort?</p>
+      </a>
+      <a href="/kennisbank?categorie=details" class="card">
+        <div class="icon" data-lucide="align-left"></div>
+        <h3>Details</h3>
+        <p>Extra achtergrondinformatie of toelichting.</p>
+      </a>
+      <a href="/kennisbank?categorie=contact" class="card">
+        <div class="icon" data-lucide="phone"></div>
+        <h3>Contact</h3>
+        <p>Waar kun je terecht met vragen of hulp?</p>
+      </a>
+    </div>
+
+    <!-- CTA knop -->
+    <a href="/kennisbank" class="cta">Bekijk alle kennisartikelen</a>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

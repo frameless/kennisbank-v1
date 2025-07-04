@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alle Kennisartikelen</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .search {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-bottom: 2rem;
+      }
+
+      .article-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .article-card {
+        padding: 1rem;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        background: #fafafa;
+        transition: box-shadow 0.2s ease;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .article-card:hover {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .article-card h3 {
+        margin: 0 0 0.5rem;
+      }
+
+      .article-card p {
+        color: #555;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Alle Kennisartikelen</h1>
+
+    <!-- <input class="search" type="text" placeholder="Zoek een artikel..." /> -->
+
+    <div class="article-list">
+      <a href="/kennisbank/artikel/wat-is-de-regeling" class="article-card">
+        <h3>Wat is de regeling?</h3>
+        <p>Een korte uitleg over de algemene context van de regeling.</p>
+      </a>
+
+      <a href="/kennisbank/artikel/waarom-bestaat-deze" class="article-card">
+        <h3>Waarom bestaat deze regeling?</h3>
+        <p>Historiek en doelstellingen van deze subsidie.</p>
+      </a>
+
+      <a href="/kennisbank/artikel/hoe-dien-ik-een-aanvraag-in" class="article-card">
+        <h3>Hoe dien ik een aanvraag in?</h3>
+        <p>Uitleg over stappen, documenten en termijnen.</p>
+      </a>
+
+      <a href="/kennisbank/artikel/benodigde-bewijsstukken" class="article-card">
+        <h3>Benodigde bewijsstukken</h3>
+        <p>Welke documenten moet je meesturen?</p>
+      </a>
+
+      <a href="/kennisbank/artikel/voorwaarden" class="article-card">
+        <h3>Voorwaarden</h3>
+        <p>Wat zijn de vereisten om in aanmerking te komen?</p>
+      </a>
+
+      <a href="/kennisbank/artikel/hoe-dien-je-een-bezwaar-in" class="article-card">
+        <h3>Hoe dien je een bezwaar in?</h3>
+        <p>Stap-voor-stap bezwaarprocedure.</p>
+      </a>
+
+      <a href="/kennisbank/artikel/kosten-en-vergoedingen" class="article-card">
+        <h3>Kosten en vergoedingen</h3>
+        <p>Wat kost het en wat krijg je vergoed?</p>
+      </a>
+
+      <a href="/kennisbank/artikel/termijnen-en-deadlines" class="article-card">
+        <h3>Termijnen en deadlines</h3>
+        <p>Belangrijke data die je moet respecteren.</p>
+      </a>
+
+      <a href="/kennisbank/artikel/geen-reactie-wat-nu" class="article-card">
+        <h3>Geen reactie ontvangen – wat nu?</h3>
+        <p>Wat doe je als je geen antwoord krijgt?</p>
+      </a>
+
+      <a href="/kennisbank/artikel/extra-details" class="article-card">
+        <h3>Extra details</h3>
+        <p>Meer informatie over uitzonderingen en nuances.</p>
+      </a>
+
+      <a href="/kennisbank/artikel/contactinformatie" class="article-card">
+        <h3>Contactinformatie</h3>
+        <p>Waar kun je terecht met vragen of hulp?</p>
+      </a>
+    </div>
+  </body>
+</html>

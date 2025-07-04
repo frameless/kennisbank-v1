@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kennisartikel Detail</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .search {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-bottom: 1.5rem;
+      }
+
+      .categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .categories button {
+        background: #f0f0f0;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .categories button.active {
+        background-color: #0047ab;
+        color: white;
+      }
+
+      .content-block {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: #f9f9f9;
+        border-left: 4px solid #0047ab;
+      }
+
+      .content-block h2 {
+        margin-top: 0;
+        font-size: 1.1rem;
+        color: #0047ab;
+      }
+
+      .back-link {
+        text-decoration: none;
+        color: #555;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="back-link" href="/kennisbank">&larr; Terug naar alle artikelen</a>
+
+    <h1>Wat is de regeling?</h1>
+
+    <!-- <input class="search" type="text" placeholder="Zoek binnen dit artikel..." /> -->
+
+    <!-- Categorieknoppen -->
+    <div class="categories">
+      <button class="active">Alle</button>
+      <button>Introductie</button>
+      <button>Aanvraag</button>
+      <button>Bewijs</button>
+      <button>Voorwaarden</button>
+      <button>Bezwaar</button>
+      <button>Kosten</button>
+      <button>Termijn</button>
+      <button>Geen reactie</button>
+      <button>Details</button>
+      <button>Contact</button>
+    </div>
+
+    <!-- Content blocks van het artikel -->
+    <div class="article-body">
+      <div class="content-block" data-category="introductie">
+        <h2>Introductie</h2>
+        <div>
+          <p>Dit artikel legt uit wat de regeling precies inhoudt en voor wie deze bedoeld is.</p>
+        </div>
+      </div>
+
+      <div class="content-block" data-category="aanvraag">
+        <h2>Aanvraag</h2>
+        <div>
+          <p>U dient een aanvraag in via het online formulier en voegt relevante bewijsstukken toe.</p>
+        </div>
+      </div>
+
+      <div class="content-block" data-category="voorwaarden">
+        <h2>Voorwaarden</h2>
+        <div>
+          <p>Je moet minstens 18 jaar oud zijn, ingeschreven in Nederland, en voldoen aan de inkomenseis.</p>
+        </div>
+      </div>
+
+      <!-- Add more content blocks here, each with its own data-category -->
+    </div>
+
+    <script>
+      const categoryButtons = document.querySelectorAll(".categories button");
+      const contentBlocks = document.querySelectorAll(".content-block");
+
+      categoryButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          categoryButtons.forEach((b) => b.classList.remove("active"));
+          button.classList.add("active");
+
+          const selected = button.textContent.trim().toLowerCase();
+          contentBlocks.forEach((block) => {
+            const category = block.dataset.category;
+            if (selected === "alle" || category === selected) {
+              block.style.display = "block";
+            } else {
+              block.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
